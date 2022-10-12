@@ -61,6 +61,5 @@ if abs(phi) > 90
 end
 
 % Use angle + 1 as index because indexing in Matlab is 1-based.
-y = [1 squeeze(encoderTable(abs(round(phi)) + 1, ...
-    abs(round(theta)) + 1, :))' .* flip];
+y = [1 squeeze(encoderTable(abs(round(phi)) + 1, abs(round(theta)) + 1, :))' .* flip];
 end

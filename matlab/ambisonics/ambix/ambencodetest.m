@@ -32,20 +32,22 @@ sourceAzRad = 45 * pi / 180;
 audioOut2d = ambencode(audioIn, ORDER, sourceAzRad);
 
 % Check the output.
-for i = 1:length(audioIn)
-    assert(sum(audioOut2d(i, :) == audioIn(i) .* ...
-        ambencodecoeff(ORDER, sourceAzRad)) == 2 * ORDER + 1);
-end
+% for i = 1:length(audioIn)
+%     assert(sum(audioOut2d(i, :) == audioIn(i) .* ambencodecoeff(ORDER, sourceAzRad)) == 2 * ORDER + 1);
+% end
+
+% for i = 1:length(audioIn)
+%     sum(audioIn(i) .* ambencodecoeff(ORDER, sourceAzRad));
+% end
 
 %% 3-D case.
-% Desired source's vertical angle.
-sourceElRad = 90 * pi/180;
+% Desired source's vertical a ngle.
+sourceElRad = 60 * pi/180;
 
 audioOut = ambencode(audioIn, ORDER, sourceAzRad, sourceElRad);
 
 % Check the output.
 for i = 1:length(audioIn)
-    assert(sum(audioOut(i, :) == audioIn(i) .* ...
-        ambencodecoeff(ORDER, sourceAzRad, sourceElRad)) == ...
+    assert(sum(audioOut(i, :) == audioIn(i) .*ambencodecoeff(ORDER, sourceAzRad, sourceElRad)) == ...
         (ORDER + 1).^2);
 end

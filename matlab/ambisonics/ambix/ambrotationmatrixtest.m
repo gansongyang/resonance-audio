@@ -38,9 +38,9 @@ addpath(fullfile(thisScriptPath, ...
 EPSILON = 1e-8;
 
 % Rotation angles (in radians) to be tested.
-roll  = [22 0 55] * pi / 180;
-pitch = [0 33 0 ] * pi / 180;
-yaw   = [0 0 44] * pi / 180;
+roll  = [22 0 55 33] * pi / 180;
+pitch = [0 33 0 33] * pi / 180;
+yaw   = [0 0 44 33] * pi / 180;
 
 % Initial sound source azimuth and elevation angles.
 sourceAzRad = 0;

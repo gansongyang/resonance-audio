@@ -14,19 +14,19 @@ See the License for the specific language governing permissions and
 limitations under the License.
 %}
 
-function [n, m] = getnm(l)
+function [n, m] = getnm(ACN)
 %GETNM Computes spherical harmonic degree and order from Ambisonic Channel Number.
 %
 %   input:
 %
-%   l - Ambisonic Channel Number as defined in http://ambisonics.ch/
+%   ACN - Ambisonic Channel Number as defined in http://ambisonics.ch/
 %
 %   output:
 %
 %   n - Spherical harmonic degree (aka Ambisonic order).
 %   m - Spherical harmonic order (aka Ambisonic degree).
 
-n = floor(sqrt(l));
-m = l-n.^2-n;
+n = floor(sqrt(ACN));
+m = ACN-n.^2-n;
 
 end

@@ -43,3 +43,6 @@ for PHI = [-158 -52 0 41 169]
         end
     end
 end
+
+
+plot(coeffsTested - coeffsReference )

@@ -46,8 +46,8 @@ end
 if nargin == 3
     l_max = (n+1)^2-1;
     y = zeros(length(phi), l_max);
-    for l = 0:l_max
-        [n,m] = getnm(l);
-        y(:, l+1) = ynm(n,m,phi,theta);
+    for ACN = 0:l_max
+        [n,m] = getnm(ACN);
+        y(:, ACN+1) = ynm(n,m,phi,theta);
     end
 end

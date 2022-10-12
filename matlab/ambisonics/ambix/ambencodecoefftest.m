@@ -27,7 +27,7 @@ ORDER = 3;
 for phi = 1:360
    coefficients2d(phi, :) = ambencodecoeff(ORDER, phi * pi / 180);
 end
-figure(1)
+figure(1) 
 plot(coefficients2d)
 
 %% 3D case:

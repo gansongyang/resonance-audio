@@ -21,6 +21,23 @@ limitations under the License.
 clearvars
 close all
 clc
+clc,clear, close all 
+
+cd(fileparts(which(mfilename))) % change dictionary to current file
+
+%% add path
+% audio file in
+addpath('/Users/songyang/Documents/GitHub/AudioFilesIn') 
+% audio file out
+addpath('/Users/songyang/Documents/GitHub/AudioFilesOut')
+% Self functions
+addpath('/Users/songyang/Documents/GitHub/Functions')
+
+
+
+%% read audio
+% [SigL,SigR, SAMPLING_RATE]= readWavClip('drum.wav',5); 
+
 
 % Import required ambisonic functions.
 addpath('../ambisonics/ambix/');
@@ -30,6 +47,9 @@ addpath('../ambisonics/shelf_filters/');
 ERROR_MARGIN = 0.001;
 SAMPLING_RATE = 48000;
 INPUT = [1; zeros(511, 1)];
+
+
+
 SOURCE_AZIMUTH_RAD = pi * (2 * rand(1) - 1);
 SOURCE_ELEVATION_RAD =  pi * (rand(1) - 0.5);
 MAX_AMBISONIC_ORDER = 5;
